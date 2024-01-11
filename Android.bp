@@ -49,6 +49,15 @@ dex_import {
 }
 
 prebuilt_etc_xml {
+	name: "manifest_IMoto_Fingerprint",
+	owner: "motorola",
+	src: "proprietary/vendor/etc/vintf/manifest/manifest_IMoto_Fingerprint.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
 	name: "vendor.qti.diag.hal.service",
 	owner: "motorola",
 	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml",

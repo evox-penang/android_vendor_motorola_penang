@@ -14,9 +14,11 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/penang/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/motorola/penang/proprietary/vendor/bin/charge_only_mode:$(TARGET_COPY_OUT_VENDOR)/bin/charge_only_mode \
     vendor/motorola/penang/proprietary/vendor/bin/diag-router:$(TARGET_COPY_OUT_VENDOR)/bin/diag-router \
+    vendor/motorola/penang/proprietary/vendor/bin/fpc_tee_test:$(TARGET_COPY_OUT_VENDOR)/bin/fpc_tee_test \
     vendor/motorola/penang/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_VENDOR)/bin/hvdcp_opti \
     vendor/motorola/penang/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-chipone:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-chipone \
     vendor/motorola/penang/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc \
+    vendor/motorola/penang/proprietary/vendor/bin/hw/chipone_ident:$(TARGET_COPY_OUT_VENDOR)/bin/hw/chipone_ident \
     vendor/motorola/penang/proprietary/vendor/bin/hw/fpc_ident:$(TARGET_COPY_OUT_VENDOR)/bin/hw/fpc_ident \
     vendor/motorola/penang/proprietary/vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service \
     vendor/motorola/penang/proprietary/vendor/bin/hw/vendor.qti.hardware.eid@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.eid@1.0-service \
@@ -53,8 +55,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/penang/proprietary/vendor/etc/charger_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fstab.qti \
     vendor/motorola/penang/proprietary/vendor/etc/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     vendor/motorola/penang/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
-    vendor/motorola/penang/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-chipone2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service-chipone2.rc \
-    vendor/motorola/penang/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc \
     vendor/motorola/penang/proprietary/vendor/etc/init/ims_rtp_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims_rtp_daemon.rc \
     vendor/motorola/penang/proprietary/vendor/etc/init/imsdaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdaemon.rc \
     vendor/motorola/penang/proprietary/vendor/etc/init/motorola.hardware.camera.imgtuner@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/motorola.hardware.camera.imgtuner@1.0-service.rc \
@@ -472,6 +472,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/penang/proprietary/vendor/lib/com.qti.settings.mannar.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.settings.mannar.so \
     vendor/motorola/penang/proprietary/vendor/lib/com.qti.stats.common.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.stats.common.so \
     vendor/motorola/penang/proprietary/vendor/lib/hw/camera.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.qcom.so \
+    vendor/motorola/penang/proprietary/vendor/lib/hw/chipone.fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/chipone.fingerprint.default.so \
     vendor/motorola/penang/proprietary/vendor/lib/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/com.qti.chi.override.so \
     vendor/motorola/penang/proprietary/vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so \
     vendor/motorola/penang/proprietary/vendor/lib/libAlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libAlacSwDec.so \
@@ -595,6 +596,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/penang/proprietary/vendor/lib/vendor.qti.diaghal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.diaghal@1.0.so \
     vendor/motorola/penang/proprietary/vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so \
     vendor/motorola/penang/proprietary/vendor/lib/vendor.qti.hardware.cvp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.cvp@1.0.so \
+    vendor/motorola/penang/proprietary/vendor/lib/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.fingerprint@1.0.so \
     vendor/motorola/penang/proprietary/vendor/lib64/camera/com.mot.eeprom.mot_gt24p128e_s5kjn1_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.mot.eeprom.mot_gt24p128e_s5kjn1_eeprom.so \
     vendor/motorola/penang/proprietary/vendor/lib64/camera/com.mot.eeprom.mot_penang_ov02b10_otp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.mot.eeprom.mot_penang_ov02b10_otp.so \
     vendor/motorola/penang/proprietary/vendor/lib64/camera/com.mot.eeprom.mot_penang_s5k4h7_otp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.mot.eeprom.mot_penang_s5k4h7_otp.so \
@@ -694,6 +696,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/penang/proprietary/vendor/lib64/com.qualcomm.mcx.policy.mfl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.mcx.policy.mfl.so \
     vendor/motorola/penang/proprietary/vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qualcomm.qti.mcx.usecase.extension.so \
     vendor/motorola/penang/proprietary/vendor/lib64/hw/camera.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/camera.qcom.so \
+    vendor/motorola/penang/proprietary/vendor/lib64/hw/chipone.fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/chipone.fingerprint.default.so \
     vendor/motorola/penang/proprietary/vendor/lib64/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qti.chi.override.so \
     vendor/motorola/penang/proprietary/vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so \
     vendor/motorola/penang/proprietary/vendor/lib64/hw/vendor.qti.hardware.eid@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.eid@1.0-impl.so \
@@ -753,6 +756,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/penang/proprietary/vendor/lib64/libcom.qti.chinodeutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcom.qti.chinodeutils.so \
     vendor/motorola/penang/proprietary/vendor/lib64/libcvp_common.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcvp_common.so \
     vendor/motorola/penang/proprietary/vendor/lib64/libcvpcpuRev_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcvpcpuRev_skel.so \
+    vendor/motorola/penang/proprietary/vendor/lib64/libfp_ext_svc2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfp_ext_svc2.so \
     vendor/motorola/penang/proprietary/vendor/lib64/libgameoptfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgameoptfeature.so \
     vendor/motorola/penang/proprietary/vendor/lib64/libgcs-calwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgcs-calwrapper.so \
     vendor/motorola/penang/proprietary/vendor/lib64/libgcs-ipc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgcs-ipc.so \
@@ -784,7 +788,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/penang/proprietary/vendor/lib64/libopencv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libopencv.so \
     vendor/motorola/penang/proprietary/vendor/lib64/libopestriping.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libopestriping.so \
     vendor/motorola/penang/proprietary/vendor/lib64/libos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libos.so \
-    vendor/motorola/penang/proprietary/vendor/lib64/libpn553_fw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpn553_fw.so \
     vendor/motorola/penang/proprietary/vendor/lib64/libpowercore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpowercore.so \
     vendor/motorola/penang/proprietary/vendor/lib64/libqdcm-mode-parser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdcm-mode-parser.so \
     vendor/motorola/penang/proprietary/vendor/lib64/libqll10.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqll10.so \
@@ -815,6 +818,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/penang/proprietary/vendor/lib64/soundfx/libqcreverb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcreverb.so \
     vendor/motorola/penang/proprietary/vendor/lib64/soundfx/libqcvirt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcvirt.so \
     vendor/motorola/penang/proprietary/vendor/lib64/soundfx/libshoebox.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libshoebox.so \
+    vendor/motorola/penang/proprietary/vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so \
     vendor/motorola/penang/proprietary/vendor/lib64/vendor.qti.diaghal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.diaghal@1.0.so \
     vendor/motorola/penang/proprietary/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so \
     vendor/motorola/penang/proprietary/vendor/lib64/vendor.qti.hardware.cvp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.cvp@1.0.so \
@@ -830,4 +834,5 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentOKGoogleHEXAGON \
     HotwordEnrollmentXGoogleHEXAGON \
     com.android.hotwordenrollment.common.util \
+    manifest_IMoto_Fingerprint \
     vendor.qti.diag.hal.service
