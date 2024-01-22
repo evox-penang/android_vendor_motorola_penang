@@ -11,10 +11,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/penang/proprietary/product/etc/felica/mfs.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfs.cfg \
     vendor/motorola/penang/proprietary/product/etc/permissions/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml \
     vendor/motorola/penang/proprietary/product/etc/permissions/privapp-permissions-com.google.android.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.google.android.euicc.xml \
-    vendor/motorola/penang/proprietary/product/etc/sysconfig/com.felicanetworks.mfc.powersave.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/com.felicanetworks.mfc.powersave.xml \
-    vendor/motorola/penang/proprietary/product/etc/sysconfig/com.felicanetworks.mfm.main.powersave.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/com.felicanetworks.mfm.main.powersave.xml \
-    vendor/motorola/penang/proprietary/product/etc/sysconfig/com.felicanetworks.mfs.powersave.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/com.felicanetworks.mfs.powersave.xml \
-    vendor/motorola/penang/proprietary/product/etc/sysconfig/com.felicanetworks.mfw.a.boot.powersave.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/com.felicanetworks.mfw.a.boot.powersave.xml \
     vendor/motorola/penang/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/motorola/penang/proprietary/vendor/bin/fpc_tee_test:$(TARGET_COPY_OUT_VENDOR)/bin/fpc_tee_test \
     vendor/motorola/penang/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-chipone:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-chipone \
@@ -577,9 +573,5 @@ PRODUCT_PACKAGES += \
     EuiccGoogle \
     HotwordEnrollmentOKGoogleHEXAGON \
     HotwordEnrollmentXGoogleHEXAGON \
-    MobileFeliCaClient \
-    MobileFeliCaMenuMainApp \
-    MobileFeliCaSettingApp \
-    MobileFeliCaWebPluginBoot \
     com.android.hotwordenrollment.common.util \
     manifest_IMoto_Fingerprint

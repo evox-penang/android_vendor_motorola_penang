@@ -43,54 +43,6 @@ android_app_import {
 	product_specific: true,
 }
 
-android_app_import {
-	name: "MobileFeliCaClient",
-	owner: "motorola",
-	apk: "proprietary/product/priv-app/MobileFeliCaClient/MobileFeliCaClient.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-android_app_import {
-	name: "MobileFeliCaMenuMainApp",
-	owner: "motorola",
-	apk: "proprietary/product/priv-app/MobileFeliCaMenuMainApp/MobileFeliCaMenuMainApp.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-android_app_import {
-	name: "MobileFeliCaSettingApp",
-	owner: "motorola",
-	apk: "proprietary/product/priv-app/MobileFeliCaSettingApp/MobileFeliCaSettingApp.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-android_app_import {
-	name: "MobileFeliCaWebPluginBoot",
-	owner: "motorola",
-	apk: "proprietary/product/priv-app/MobileFeliCaWebPluginBoot/MobileFeliCaWebPluginBoot.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
 dex_import {
 	name: "com.android.hotwordenrollment.common.util",
 	owner: "motorola",
