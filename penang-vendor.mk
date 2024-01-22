@@ -575,3 +575,9 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentXGoogleHEXAGON \
     com.android.hotwordenrollment.common.util \
     manifest_IMoto_Fingerprint
+
+# Copy touch firmware to recovery
+PRODUCT_COPY_FILES += \
+    vendor/motorola/penang/proprietary/vendor/firmware/focaltech-csot-ft8057-05-0000-penang.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/focaltech-csot-ft8057-05-0000-penang.bin \
+    vendor/motorola/penang/proprietary/vendor/firmware/djn_novatek_ts_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/djn_novatek_ts_fw.bin \
+    vendor/motorola/penang/proprietary/vendor/firmware/djn_novatek_ts_mp.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/djn_novatek_ts_mp.bin
